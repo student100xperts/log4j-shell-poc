@@ -24,26 +24,6 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: log4shell-demo
-  annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    
-
-spec:
-  ports:
-    - port: 8080
-      targetPort: 8080
-      protocol: TCP
-  type: LoadBalancer
-  selector:
-    app: log4shell-demo
----
-
-
-apiVersion: v1
-kind: Service
-metadata:
   name: service-log4shell
 spec:
   ports:
